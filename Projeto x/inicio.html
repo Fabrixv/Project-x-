@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>Projeto x </title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="inicio.css">
-  </head>
-  <body>
-    
-    <header>
-  <div id="superior">
+<head>
+  <meta charset="UTF-8">
+  <title>Projeto X</title>
+  <link rel="stylesheet" href="inicio.css">
+</head>
+
+<body>
+
+  <!-- Parte superior do site -->
+  <header id="superior">
     <div id="menuPainel"></div>
-  <button id="menuBtn" type="button">
-  <img src="Menu.png" id="menu" >
-</button>
-<button onclick="location.href='compras.html'" id="carrinhoBtn" type="button">
-  <img src="carrinhodecompras.png" id="carrinhodecompras" >
-</button>
-</header>
-
-<a onclick="location.href='promocoes.html'" id="promocoes">Promoções</a>
-<div onclick="location.href='https://discord.gg/nd8RrjKZjG'" id="reposicao">Discord</div>
-  <img src="logo.png" id="logo">
-  <img src="user.png" id="user">
-
+    <button id="menuBtn" type="button">
+      <img src="Menu.png" id="menu" alt="Menu">
+    </button>
+    <button onclick="location.href='compras.html'" id="carrinhoBtn" type="button">
+      <img src="carrinhodecompras.png" id="carrinhodecompras" alt="Carrinho">
+    </button>
+    <a onclick="location.href='promocoes.html'" id="promocoes">Promoções</a>
+    <div onclick="location.href='https://discord.gg/nd8RrjKZjG'" id="reposicao">Discord</div>
+    <img src="logo.png" id="logo" alt="Logo">
+    <img src="user.png" id="user" alt="Usuário">
+  </header>
+  <!-- Sistema do menu  -->
+<div id="menuLateral">
+  <ul>
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Produtos</a></li>
+    <li><a href="#">Promoções</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
 </div>
+
+
+  <!-- Configuração dos Produto -->
+  <div class="gap">
+    <div class="produto pr1" data-produto="1"></div>
+    <div class="produto pr2" data-produto="2"></div>
+    <div class="produto pr3" data-produto="3"></div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-content">
+      <span class="closeBtn" id="closeBtn">&times;</span>
+      <h2 id="tituloProduto"></h2>
+      <p id="descricaoProduto"></p>
+    </div>
+  </div>
+
+<script src="inicio.js"></script>
 </body>
 </html>
-<script src="inicio.js"></script>
